@@ -1,13 +1,13 @@
 import './globals.css'
 import type { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={`${openSans.className} font-bold`}>{children}</body>
 		</html>
 	)
 }
