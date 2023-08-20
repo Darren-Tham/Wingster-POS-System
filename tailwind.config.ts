@@ -6,7 +6,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				'main-blue': '#2261FF',
-                'main-light-blue': '#5182FF',
+                'main-light-blue': '#638DFF',
                 'icon-color': '#B3B3B3'
 			}
 		}
