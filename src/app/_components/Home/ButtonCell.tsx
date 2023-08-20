@@ -14,5 +14,5 @@ type Props = {
  * @returns `ButtonCell` component
  */
 export default function ButtonCell({ value, cellStyles }: Props): JSX.Element {
-	return <button className={`${cellStyles} bg-white`}>{value}</button>
+	return <button className={`${cellStyles} bg-white hover:bg-neutral-50`}>{value}</button>
 }
