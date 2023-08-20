@@ -30,7 +30,7 @@ function getButtonCells(buttonCellNames: string[], cellStyles: string): JSX.Elem
 }
 
 /**
- * Grid that displays the different pages
+ * Grid that links to different pages
  * of the application for the `Home` page.
  */
 export default function Grid(): JSX.Element {
