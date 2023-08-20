@@ -1,5 +1,7 @@
+// React
 import { JSX } from 'react'
 
+// Components
 import Time from './Time'
 
 /**
