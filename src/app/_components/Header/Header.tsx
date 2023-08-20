@@ -2,6 +2,9 @@ import { JSX } from 'react'
 
 import Time from './Time'
 
+/**
+ * Main header of each page.
+ */
 export default function Header(): JSX.Element {
 	return (
 		<header className='flex justify-between'>

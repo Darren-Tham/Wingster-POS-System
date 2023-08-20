@@ -1,34 +1,41 @@
+// React
+import { JSX } from 'react'
+
 // Components
 import Header from './_components/Header/Header'
 import Sidebar from './_components/Sidebar/Sidebar'
 import HeaderCell from './_components/Home/HeaderCell'
 import ButtonCell from './_components/Home/ButtonCell'
 
-const HEADER_CELL_VALUES = ['Orders', ' Payments', 'History', 'Settings']
-const BUTTON_CELL_VALUES = [
-	'Quick Order',
-	'Tender',
-	'Order History',
-	'Inventory Settings',
-	'Cosmic Order',
-	'Pay Out',
-	'System History',
-	'User Settings',
-	'Catering + Schedule',
-	'Open Cash Drawer',
-	'Trends',
-	'Time Card'
-]
-
-function renderHeaderCells(headerCellValues: string[], cellStyles: string): JSX.Element[] {
-	return headerCellValues.map(value => <HeaderCell key={value} value={value} cellStyles={cellStyles} />)
+/**
+ * Renders the Header cells for
+ * the grid in the Home page.
+ *
+ * @param headerCellNames names of the header cells
+ * @param cellStyles general style of the cell
+ * @returns array of `HeaderCell` components
+ */
+function renderHeaderCells(headerCellNames: string[], cellStyles: string): JSX.Element[] {
+	return headerCellNames.map(name => <HeaderCell key={name} value={name} cellStyles={cellStyles} />)
 }
 
-function renderButtonCells(buttonCellValues: string[], cellStyles: string): JSX.Element[] {
-	return buttonCellValues.map(value => <ButtonCell key={value} value={value} cellStyles={cellStyles} />)
+/**
+ * Renders the Button cells for
+ * the grid in the Home page.
+ *
+ * @param buttonCellNames names of the button cells
+ * @param cellStyles general style of the cell
+ * @returns array of `ButtonCell` components
+ */
+function renderButtonCells(buttonCellNames: string[], cellStyles: string): JSX.Element[] {
+	return buttonCellNames.map(name => <ButtonCell key={name} value={name} cellStyles={cellStyles} />)
 }
 
-export default function Home() {
+/**
+ * Home page of the application.
+ * @returns `Home` page
+ */
+export default function Home(): JSX.Element {
 	const headerCellValues = ['Orders', ' Payments', 'History', 'Settings']
 	const buttonCellValues = [
 		'Quick Order',
@@ -45,6 +52,7 @@ export default function Home() {
 		'Time Card'
 	]
 	const cellStyles = 'text-3xl rounded-xl drop-shadow-md p-6 w-full h-full'
+
 	return (
 		<div className='flex'>
 			<Sidebar />
