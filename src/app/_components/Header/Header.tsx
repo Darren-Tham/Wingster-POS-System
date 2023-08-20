@@ -4,7 +4,7 @@ import Time from './Time'
 
 export default function Header(): JSX.Element {
 	return (
-		<div className='flex bg-red-50 justify-between'>
+		<header className='flex justify-between'>
 			<div>
 				<span className='font-bold text-5xl block mb-2'>안녕하세요!</span>
 				<span className='text-2xl text-blue'>Wingster </span>
@@ -13,6 +13,6 @@ export default function Header(): JSX.Element {
 			<div>
 				<Time />
 			</div>
-		</div>
+		</header>
 	)
 }

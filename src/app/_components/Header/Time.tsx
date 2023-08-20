@@ -2,6 +2,10 @@
 
 import { JSX, useEffect, useState } from 'react'
 
+/**
+ * Displays the time along with the
+ * date and day.
+ */
 export default function Time(): JSX.Element {
 	const [date, setDate] = useState(new Date())
 
