@@ -52,9 +52,9 @@ export default function Grid(): JSX.Element {
 	const cellStyles = 'text-3xl rounded-xl drop-shadow-md p-6 w-full h-full'
 
 	return (
-		<div className='grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center text-3xl'>
+		<section className='grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center text-3xl'>
 			{getHeaderCells(headerCellValues, cellStyles)}
 			{getButtonCells(buttonCellValues, cellStyles)}
-		</div>
+		</section>
 	)
 }

@@ -16,11 +16,11 @@ export default function Time(): JSX.Element {
     }, [])
 
 	return (
-		<div className='flex flex-col gap-2 text-2xl items-end'>
+		<time className='flex flex-col gap-2 text-2xl items-end'>
 			<span className="text-main-blue">{getDay(date)}</span>
 			<span>{getDate(date)}</span>
             <span className="text-main-blue">{getTime(date)}</span>
-		</div>
+		</time>
 	)
 }
 
