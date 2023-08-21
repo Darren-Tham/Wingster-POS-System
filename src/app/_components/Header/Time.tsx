@@ -51,7 +51,7 @@ function getDate(date: Date): string {
 		year: 'numeric'
 	} as const
 	const dateTimeFormat = new Intl.DateTimeFormat('en-US', options)
-	return dateTimeFormat.format()
+	return dateTimeFormat.format(date)
 }
 
 /**
@@ -70,5 +70,5 @@ function getTime(date: Date): string {
 		second: 'numeric'
 	} as const
     const dateTimeFormat = new Intl.DateTimeFormat('en-US', options)
-    return dateTimeFormat.format()
+    return dateTimeFormat.format(date)
 }
