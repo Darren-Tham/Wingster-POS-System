@@ -55,10 +55,10 @@
     },
     "windows": [
       {
-        "fullscreen": false,
+        "fullscreen": true,
         "height": 600,
         "resizable": true,
-        "title": "my-app",
+        "title": "Wingster POS System",
         "width": 800
       }
     ]
