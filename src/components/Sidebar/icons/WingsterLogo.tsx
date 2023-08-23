@@ -5,15 +5,17 @@ import { JSX } from 'react'
 import Image from 'next/image'
 
 // Logo
-import WingsterImage from '@public/wingster-logo.png'
+import WingsterPNG from '@public/wingster-logo.png'
 
 /**
  * Wingster Icon in `Sidebar`.
+ *
+ * @returns `WingsterLogo` component
  */
 export default function WingsterLogo(): JSX.Element {
 	return (
 		<div className='my-8'>
-			<Image width='70' height='70' src={WingsterImage} alt='Wingster Icon' unoptimized />
+			<Image width='70' height='70' src={WingsterPNG} alt='Wingster Icon' unoptimized />
 		</div>
 	)
 }

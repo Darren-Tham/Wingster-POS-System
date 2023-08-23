@@ -6,6 +6,9 @@ import Grid from '@components/home/Grid'
 // Constants
 import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
 
+// Enums
+import { Icons } from '@/lib/Enums'
+
 /**
  * Home page of the application.
  * @returns `Home` page
@@ -13,7 +16,7 @@ import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
 export default function Home() {
 	return (
 		<div className='flex'>
-			<Sidebar />
+			<Sidebar currentIcon={Icons.House} />
 			<main className={`${MAIN_BACKGROUND_STYLES} gap-10`}>
 				<Header />
                 <Grid />

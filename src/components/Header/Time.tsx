@@ -10,16 +10,16 @@ import { useEffect, useState } from 'react'
 export default function Time() {
 	const [date, setDate] = useState(new Date())
 
-    useEffect(() => {
-    const interval = setInterval(() => setDate(new Date()))
-        return () => clearInterval(interval)
-    }, [])
+	useEffect(() => {
+		const interval = setInterval(() => setDate(new Date()))
+		return () => clearInterval(interval)
+	}, [])
 
 	return (
 		<time className='flex flex-col gap-2 text-2xl items-end'>
-			<span className="text-main-blue">{getDay(date)}</span>
+			<span className='text-main-blue'>{getDay(date)}</span>
 			<span>{getDate(date)}</span>
-            <span className="text-main-blue">{getTime(date)}</span>
+			<span className='text-main-blue'>{getTime(date)}</span>
 		</time>
 	)
 }
@@ -69,6 +69,6 @@ function getTime(date: Date) {
 		minute: 'numeric',
 		second: 'numeric'
 	} as const
-    const dateTimeFormat = new Intl.DateTimeFormat('en-US', options)
-    return dateTimeFormat.format(date)
+	const dateTimeFormat = new Intl.DateTimeFormat('en-US', options)
+	return dateTimeFormat.format(date)
 }
