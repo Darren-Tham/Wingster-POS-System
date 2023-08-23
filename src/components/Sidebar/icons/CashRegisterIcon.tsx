@@ -1,12 +1,12 @@
 // SVG
-import CashRegisterSVG from '@public/cash-register-icon.svg'
+import CashRegisterSVG from "@public/cash-register-icon.svg";
 
 // Components
-import ButtonIcon from '@components/sidebar/ButtonIcon'
+import ButtonIcon from "@/components/sidebar/ButtonIcon";
 
 type Props = {
-	iconStyles: string
-}
+  iconStyles: string;
+};
 
 /**
  * Cash Register Icon in `Sidebar`. Opens
@@ -16,5 +16,11 @@ type Props = {
  * @returns `CashRegisterIcon` component
  */
 export default function CashRegisterIcon({ iconStyles }: Props) {
-	return <ButtonIcon src={CashRegisterSVG} alt='Cash Register Icon' iconStyles={iconStyles} />
+  return (
+    <ButtonIcon
+      src={CashRegisterSVG}
+      alt="Cash Register Icon"
+      iconStyles={iconStyles}
+    />
+  );
 }
