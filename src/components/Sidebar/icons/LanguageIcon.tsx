@@ -1,5 +1,5 @@
 type Props = {
-    buttonStyles: string
+    iconStyles: string
 }
 
 /**
@@ -9,6 +9,6 @@ type Props = {
  * @param Props `LanguageIcon` props
  * @returns `LanguageIcon` component
  */
-export default function LanguageIcon({ buttonStyles }: Props) {
-	return <button className={`${buttonStyles} text-xl text-icon-color`}>ENG</button>
+export default function LanguageIcon({ iconStyles }: Props) {
+	return <button className={`${iconStyles} text-xl text-icon-color`}>ENG</button>
 }

@@ -7,7 +7,7 @@ import ButtonIcon from '@components/sidebar/ButtonIcon'
 
 type Props = {
 	isSelected: boolean
-	buttonStyles: string
+	iconStyles: string
 }
 
 /**
@@ -17,6 +17,6 @@ type Props = {
  * @param Props `TenderIcon` props
  * @returns `TenderIcon` component
  */
-export default function TenderIcon({ isSelected, buttonStyles }: Props) {
-	return <ButtonIcon src={isSelected ? TenderBlueSVG : TenderGraySVG} alt='Tender Icon' buttonStyles={buttonStyles} isSelected={isSelected} />
+export default function TenderIcon({ isSelected, iconStyles }: Props) {
+	return <ButtonIcon src={isSelected ? TenderBlueSVG : TenderGraySVG} alt='Tender Icon' iconStyles={iconStyles} isSelected={isSelected} />
 }

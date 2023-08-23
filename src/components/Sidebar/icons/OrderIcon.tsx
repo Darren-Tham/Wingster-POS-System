@@ -7,7 +7,7 @@ import ButtonIcon from '@components/sidebar/ButtonIcon'
 
 type Props = {
 	isSelected: boolean
-	buttonStyles: string
+	iconStyles: string
 }
 
 /**
@@ -17,6 +17,6 @@ type Props = {
  * @param Props `OrderIcon` props
  * @returns `OrderIcon` component
  */
-export default function OrderIcon({ isSelected, buttonStyles }: Props) {
-    return <ButtonIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt="Order Icon" buttonStyles={buttonStyles} isSelected={isSelected} />
+export default function OrderIcon({ isSelected, iconStyles }: Props) {
+    return <ButtonIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt="Order Icon" iconStyles={iconStyles} isSelected={isSelected} />
 }

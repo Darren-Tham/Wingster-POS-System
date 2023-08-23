@@ -5,7 +5,7 @@ import CashRegisterSVG from '@public/cash-register-icon.svg'
 import ButtonIcon from '@components/sidebar/ButtonIcon'
 
 type Props = {
-	buttonStyles: string
+	iconStyles: string
 }
 
 /**
@@ -15,6 +15,6 @@ type Props = {
  * @param Props `CashRegisterIcon` props
  * @returns `CashRegisterIcon` component
  */
-export default function CashRegisterIcon({ buttonStyles }: Props) {
-	return <ButtonIcon src={CashRegisterSVG} alt='Cash Register Icon' buttonStyles={buttonStyles} />
+export default function CashRegisterIcon({ iconStyles }: Props) {
+	return <ButtonIcon src={CashRegisterSVG} alt='Cash Register Icon' iconStyles={iconStyles} />
 }

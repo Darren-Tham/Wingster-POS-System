@@ -7,7 +7,7 @@ import HouseBlueSVG from '@public/house-blue-icon.svg'
 
 type Props = {
     isSelected: boolean
-    buttonStyles: string
+    iconStyles: string
 }
 
 /**
@@ -17,6 +17,6 @@ type Props = {
  * @param Props `HouseIcon` props
  * @returns `HouseIcon` component
  */
-export default function HouseIcon({ isSelected, buttonStyles }: Props) {
-    return <ButtonIcon src={isSelected ? HouseBlueSVG : HouseGraySVG} alt="House Icon" buttonStyles={buttonStyles} isSelected={isSelected} />
+export default function HouseIcon({ isSelected, iconStyles }: Props) {
+    return <ButtonIcon src={isSelected ? HouseBlueSVG : HouseGraySVG} alt="House Icon" iconStyles={iconStyles} isSelected={isSelected} />
 }

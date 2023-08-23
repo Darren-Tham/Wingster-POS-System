@@ -10,7 +10,7 @@ import Image, { StaticImageData } from 'next/image'
 type Props = {
 	src: StaticImageData
 	alt: string
-	buttonStyles: string
+	iconStyles: string
 	isSelected?: boolean
 }
 
@@ -21,9 +21,9 @@ type Props = {
  * @param Props `ButtonIcon` props
  * @returns `ButtonIcon` components
  */
-export default function ButtonIcon({ src, alt, buttonStyles, isSelected }: Props): JSX.Element {
+export default function ButtonIcon({ src, alt, iconStyles, isSelected }: Props): JSX.Element {
 	return (
-		<button className={buttonStyles}>
+		<button className={iconStyles}>
 			<Image src={src} alt={alt} />
 			{isSelected && <SelectionBar />}
 		</button>
