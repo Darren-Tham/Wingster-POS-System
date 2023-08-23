@@ -1,5 +1,9 @@
+// Next
+import Link from 'next/link'
+
 type Props = {
-	value: string
+	name: string
+	href: string
 	cellStyles: string
 }
 
@@ -10,6 +14,10 @@ type Props = {
  * @param Props props of `ButtonCell`
  * @returns `ButtonCell` component
  */
-export default function ButtonCell({ value, cellStyles }: Props) {
-	return <button className={`${cellStyles} bg-white hover:bg-neutral-50`}>{value}</button>
+export default function ButtonCell({ name, href, cellStyles }: Props) {
+	return (
+		<Link className={`${cellStyles} bg-white hover:bg-neutral-50`} href={href}>
+			{name}
+		</Link>
+	)
 }

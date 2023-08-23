@@ -11,7 +11,7 @@ export default function Time() {
 	const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        const interval = setInterval(() => setDate(new Date()))
+    const interval = setInterval(() => setDate(new Date()))
         return () => clearInterval(interval)
     }, [])
 

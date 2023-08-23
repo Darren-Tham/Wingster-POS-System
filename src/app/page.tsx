@@ -1,10 +1,10 @@
 // Components
-import Header from '../components/Header/Header'
-import Sidebar from '../components/Sidebar/Sidebar'
-import Grid from '../components/Home/Grid'
+import Header from '@components/header/Header'
+import Sidebar from '@components/sidebar/Sidebar'
+import Grid from '@components/home/Grid'
 
 // Constants
-import { MAIN_BACKGROUND_STYLES } from '../lib/Constants'
+import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
 
 /**
  * Home page of the application.

@@ -1,6 +1,6 @@
 type Props = {
-    value: string
-    cellStyles: string
+	name: string
+	cellStyles: string
 }
 
 /**
@@ -11,6 +11,8 @@ type Props = {
  * @param Props props of `HeaderCell`
  * @returns `HeaderCell` component
  */
-export default function HeaderCell({ value, cellStyles }: Props) {
-    return <div className={`${cellStyles} flex justify-center items-center bg-gradient-to-br from-main-light-blue to-main-blue text-white select-none cursor-default`}>{value}</div>
+export default function HeaderCell({ name, cellStyles }: Props) {
+	return (
+		<div className={`${cellStyles} bg-gradient-to-br from-main-light-blue to-main-blue text-white select-none cursor-default`}>{name}</div>
+	)
 }
