@@ -1,13 +1,13 @@
 'use client'
 
 // React
-import { JSX, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 /**
  * Displays the time along with the
  * date and day.
  */
-export default function Time(): JSX.Element {
+export default function Time() {
 	const [date, setDate] = useState(new Date())
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function Time(): JSX.Element {
  * @param date `Date` object
  * @returns weekday
  */
-function getDay(date: Date): string {
+function getDay(date: Date) {
 	const options: Intl.DateTimeFormatOptions = { weekday: 'long' } as const
 	const dateTimeFormat = new Intl.DateTimeFormat('en-US', options)
 	return dateTimeFormat.format(date)
@@ -44,7 +44,7 @@ function getDay(date: Date): string {
  * @param date `Date` object
  * @returns date
  */
-function getDate(date: Date): string {
+function getDate(date: Date) {
 	const options: Intl.DateTimeFormatOptions = {
 		month: 'long',
 		day: 'numeric',
@@ -63,7 +63,7 @@ function getDate(date: Date): string {
  * @param date `Date` object
  * @returns time
  */
-function getTime(date: Date): string {
+function getTime(date: Date) {
 	const options: Intl.DateTimeFormatOptions = {
 		hour: 'numeric',
 		minute: 'numeric',

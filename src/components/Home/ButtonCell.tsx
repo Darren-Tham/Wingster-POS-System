@@ -1,6 +1,3 @@
-// React
-import { JSX } from 'react'
-
 type Props = {
 	value: string
 	cellStyles: string
@@ -13,6 +10,6 @@ type Props = {
  * @param Props props of `ButtonCell`
  * @returns `ButtonCell` component
  */
-export default function ButtonCell({ value, cellStyles }: Props): JSX.Element {
+export default function ButtonCell({ value, cellStyles }: Props) {
 	return <button className={`${cellStyles} bg-white hover:bg-neutral-50`}>{value}</button>
 }

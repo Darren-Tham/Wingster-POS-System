@@ -1,6 +1,3 @@
-// React
-import { JSX } from 'react'
-
 // Components
 import HeaderCell from './HeaderCell'
 import ButtonCell from './ButtonCell'
@@ -13,7 +10,7 @@ import ButtonCell from './ButtonCell'
  * @param cellStyles general style of the cell
  * @returns array of `HeaderCell` components
  */
-function getHeaderCells(headerCellNames: string[], cellStyles: string): JSX.Element[] {
+function getHeaderCells(headerCellNames: string[], cellStyles: string) {
 	return headerCellNames.map(name => <HeaderCell key={name} value={name} cellStyles={cellStyles} />)
 }
 
@@ -25,7 +22,7 @@ function getHeaderCells(headerCellNames: string[], cellStyles: string): JSX.Elem
  * @param cellStyles general style of the cell
  * @returns array of `ButtonCell` components
  */
-function getButtonCells(buttonCellNames: string[], cellStyles: string): JSX.Element[] {
+function getButtonCells(buttonCellNames: string[], cellStyles: string) {
 	return buttonCellNames.map(name => <ButtonCell key={name} value={name} cellStyles={cellStyles} />)
 }
 
@@ -33,7 +30,7 @@ function getButtonCells(buttonCellNames: string[], cellStyles: string): JSX.Elem
  * Grid that links to different pages
  * of the application for the `Home` page.
  */
-export default function Grid(): JSX.Element {
+export default function Grid() {
 	const headerCellValues = ['Orders', ' Payments', 'History', 'Settings']
 	const buttonCellValues = [
 		'Quick Order',

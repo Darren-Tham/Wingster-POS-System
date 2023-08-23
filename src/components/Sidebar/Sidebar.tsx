@@ -6,11 +6,11 @@ import Button from './Button'
 import WingsterLogo from './WingsterLogo'
 
 // Icons
-import HouseIcon from '../../../../public/house-icon.svg'
-import BowlIcon from '../../../../public/bowl-icon.svg'
-import DollarSign from '../../../../public/dollar-sign-icon.svg'
-import CashRegister from '../../../../public/cash-register-icon.svg'
-import Logout from '../../../../public/logout-icon.svg'
+import HouseIcon from '../../../public/house-icon.svg'
+import BowlIcon from '../../../public/bowl-icon.svg'
+import DollarSign from '../../../public/dollar-sign-icon.svg'
+import CashRegister from '../../../public/cash-register-icon.svg'
+import Logout from '../../../public/logout-icon.svg'
 
 /**
  * Sidebar that links to different pages

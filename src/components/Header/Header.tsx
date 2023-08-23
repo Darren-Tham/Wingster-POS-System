@@ -1,13 +1,10 @@
-// React
-import { JSX } from 'react'
-
 // Components
 import Time from './Time'
 
 /**
  * Main header of each page.
  */
-export default function Header(): JSX.Element {
+export default function Header() {
 	return (
 		<header className='flex justify-between'>
 			<div>

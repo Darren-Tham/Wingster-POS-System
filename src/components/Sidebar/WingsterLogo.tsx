@@ -5,7 +5,7 @@ import { JSX } from 'react'
 import Image from 'next/image'
 
 // Logo
-import WingsterImage from '../../../../public/wingster-logo.png'
+import WingsterImage from '../../../public/wingster-logo.png'
 
 /**
  * Wingster Icon in `Sidebar`.
