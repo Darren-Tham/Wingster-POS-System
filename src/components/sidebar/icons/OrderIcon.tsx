@@ -1,14 +1,14 @@
 // SVG
-import OrderGraySVG from '@public/order-gray-icon.svg'
-import OrderBlueSVG from '@public/order-blue-icon.svg'
+import OrderGraySVG from "@public/order-gray-icon.svg";
+import OrderBlueSVG from "@public/order-blue-icon.svg";
 
 // Components
-import ButtonIcon from '@components/sidebar/ButtonIcon'
+import LinkIcon from "../LinkIcon";
 
 type Props = {
-	isSelected: boolean
-	iconStyles: string
-}
+  isSelected: boolean;
+  iconStyles: string;
+};
 
 /**
  * Order Icon in `Sidebar`. Redirects
@@ -18,5 +18,13 @@ type Props = {
  * @returns `OrderIcon` component
  */
 export default function OrderIcon({ isSelected, iconStyles }: Props) {
-    return <ButtonIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt="Order Icon" iconStyles={iconStyles} isSelected={isSelected} />
+  return (
+    <LinkIcon
+      src={isSelected ? OrderBlueSVG : OrderGraySVG}
+      alt="Order Icon"
+      href="/"
+      iconStyles={iconStyles}
+      isSelected={isSelected}
+    />
+  );
 }

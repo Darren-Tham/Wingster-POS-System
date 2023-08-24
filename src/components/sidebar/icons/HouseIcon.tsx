@@ -1,14 +1,14 @@
 // Components
-import ButtonIcon from "@components/sidebar/ButtonIcon"
+import LinkIcon from "../LinkIcon";
 
 // SVG
-import HouseGraySVG from '@public/house-gray-icon.svg'
-import HouseBlueSVG from '@public/house-blue-icon.svg'
+import HouseGraySVG from "@public/house-gray-icon.svg";
+import HouseBlueSVG from "@public/house-blue-icon.svg";
 
 type Props = {
-    isSelected: boolean
-    iconStyles: string
-}
+  isSelected: boolean;
+  iconStyles: string;
+};
 
 /**
  * House Icon in `Sidebar`. Redirects
@@ -18,5 +18,13 @@ type Props = {
  * @returns `HouseIcon` component
  */
 export default function HouseIcon({ isSelected, iconStyles }: Props) {
-    return <ButtonIcon src={isSelected ? HouseBlueSVG : HouseGraySVG} alt="House Icon" iconStyles={iconStyles} isSelected={isSelected} />
+  return (
+    <LinkIcon
+      src={isSelected ? HouseBlueSVG : HouseGraySVG}
+      alt="House Icon"
+      href="/"
+      iconStyles={iconStyles}
+      isSelected={isSelected}
+    />
+  );
 }

@@ -1,14 +1,15 @@
 // SVG
-import TenderGraySVG from '@public/tender-gray-icon.svg'
-import TenderBlueSVG from '@public/tender-blue-icon.svg'
+import TenderGraySVG from "@public/tender-gray-icon.svg";
+import TenderBlueSVG from "@public/tender-blue-icon.svg";
 
 // Components
-import ButtonIcon from '@components/sidebar/ButtonIcon'
+import LinkIcon from "../LinkIcon";
+import Link from "next/link";
 
 type Props = {
-	isSelected: boolean
-	iconStyles: string
-}
+  isSelected: boolean;
+  iconStyles: string;
+};
 
 /**
  * Tender Icon in `Sidebar`. Redirects
@@ -18,5 +19,13 @@ type Props = {
  * @returns `TenderIcon` component
  */
 export default function TenderIcon({ isSelected, iconStyles }: Props) {
-	return <ButtonIcon src={isSelected ? TenderBlueSVG : TenderGraySVG} alt='Tender Icon' iconStyles={iconStyles} isSelected={isSelected} />
+  return (
+    <LinkIcon
+      src={isSelected ? TenderBlueSVG : TenderGraySVG}
+		  alt="Tender Icon"
+		  href="/"
+      iconStyles={iconStyles}
+      isSelected={isSelected}
+    />
+  );
 }
