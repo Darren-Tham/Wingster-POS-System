@@ -1,12 +1,12 @@
 // SVG
-import LogoutSVG from "@public/logout-icon.svg";
+import LogoutSVG from '@public/logout-icon.svg'
 
 // Components
-import ButtonIcon from "@/components/sidebar/ButtonIcon";
+import ButtonIcon from '@components/sidebar/ButtonIcon'
 
 type Props = {
-  iconStyles: string;
-};
+	iconStyles: string
+}
 
 /**
  * Logout Icon in `Sidebar`. Logs out
@@ -15,7 +15,5 @@ type Props = {
  * @returns `LogoutIcon` component
  */
 export default function LogoutIcon({ iconStyles }: Props) {
-  return (
-    <ButtonIcon src={LogoutSVG} alt="Logout Icon" iconStyles={iconStyles} />
-  );
+	return <ButtonIcon src={LogoutSVG} alt='Logout Icon' iconStyles={iconStyles} />
 }
