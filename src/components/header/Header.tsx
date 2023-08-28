@@ -1,5 +1,6 @@
 // Components
 import Time from './Time'
+import SearchBar from './SearchBar'
 
 /**
  * Main header of each page.
@@ -13,6 +14,7 @@ export default function Header() {
 				<span className='text-2xl'>Wings & K-Food</span>
 			</div>
 			<div>
+				<SearchBar />
 				<Time />
 			</div>
 		</header>

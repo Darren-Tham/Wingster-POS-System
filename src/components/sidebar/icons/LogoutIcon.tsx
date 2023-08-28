@@ -1,6 +1,7 @@
 // SVG
 import LogoutSVG from '@public/logout-icon.svg'
 
+
 // Components
 import ButtonIcon from '@components/sidebar/ButtonIcon'
 
