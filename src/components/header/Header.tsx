@@ -2,10 +2,14 @@
 import Time from './Time'
 import SearchBar from './SearchBar'
 
+type Props = {
+	showSearchBar: boolean
+}
+
 /**
  * Main header of each page.
  */
-export default function Header() {
+export default function Header({ showSearchBar }: Props) {
 	return (
 		<header className='flex justify-between'>
 			<div>
@@ -14,8 +18,8 @@ export default function Header() {
 				<span className='text-2xl'>Wings & K-Food</span>
 			</div>
 			<div>
-				<SearchBar />
-				<Time />
+                { !showSearchBar && <Time />}
+                { showSearchBar && <SearchBar />}
 			</div>
 		</header>
 	)

@@ -18,7 +18,7 @@ export default function Home() {
 		<div className='flex'>
 			<Sidebar currentIcon={Icons.House} />
 			<main className={`${MAIN_BACKGROUND_STYLES} gap-10`}>
-				<Header />
+                <Header showSearchBar={false} />
                 <Grid />
 			</main>
 		</div>
