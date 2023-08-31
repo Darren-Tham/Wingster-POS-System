@@ -51,10 +51,10 @@ export default function Grid() {
 		{ name: 'Trends', href: '/' },
 		{ name: 'Time Card', href: '/' }
 	]
-	const cellStyles = 'text-3xl rounded-xl drop-shadow-md p-6 w-full h-full flex justify-center items-center text-center'
+	const cellStyles = 'max-sm:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-3xl rounded-xl drop-shadow-md p-6 w-full h-full flex justify-center items-center text-center'
 
 	return (
-		<section className='grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center text-3xl'>
+		<section className='grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center'>
 			{getHeaderCells(headerCells, cellStyles)}
 			{getButtonCells(buttonCells, cellStyles)}
 		</section>
