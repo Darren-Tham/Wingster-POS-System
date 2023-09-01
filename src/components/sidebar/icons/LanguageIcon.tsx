@@ -1,17 +1,18 @@
-/**
- * Props for `LanguageIcon` component.
- */
-type Props = {
-    iconStyles: string
-}
+'use client'
+
+// React
+import { useContext } from 'react'
+
+// Context
+import IconContext from '@/context/IconContext'
 
 /**
  * Lanuage Icon in `Sidebar`. Toggles
  * different languages for the application.
  *
- * @param iconStyles general styling of the icon
  * @returns `LanguageIcon` component
  */
-export default function LanguageIcon({ iconStyles }: Props) {
+export default function LanguageIcon() {
+	const iconStyles = useContext(IconContext)
 	return <button className={`${iconStyles} text-xl text-icon-color`}>ENG</button>
 }

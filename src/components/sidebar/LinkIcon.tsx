@@ -1,3 +1,11 @@
+'use client'
+
+// React
+import { useContext } from 'react'
+
+// Context
+import IconContext from '@/context/IconContext'
+
 // Next
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
@@ -12,7 +20,6 @@ type Props = {
 	href: string
 	src: StaticImageData
 	alt: string
-	iconStyles: string
 	isSelected: boolean
 }
 
@@ -20,16 +27,15 @@ type Props = {
  * Link element with Icon that links to
  * another page in `Sidebar`.
  *
- * @param Props `LinkIcon` props
  * @param href relative path to another page
  * @param src source of the image
  * @param alt alternative text for the image
- * @param iconStyles general styling for the icons
  * @param isSelected boolean determining whether the
- *                   icon is seleted
+ *                   icon is selected
  * @returns `LinkIcon` component
  */
-export default function LinkIcon({ href, src, alt, iconStyles, isSelected }: Props) {
+export default function LinkIcon({ href, src, alt, isSelected }: Props) {
+	const iconStyles = useContext(IconContext)
 	return (
 		<Link className={iconStyles} href={href}>
 			<Image src={src} alt={alt} />

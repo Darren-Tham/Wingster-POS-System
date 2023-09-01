@@ -1,8 +1,10 @@
-// React
-import { JSX } from 'react'
+'use client'
 
-// Components
-import SelectionBar from './SelectionBar'
+// React
+import { useContext } from 'react'
+
+// Context
+import IconContext from '@/context/IconContext'
 
 // Next
 import Image, { StaticImageData } from 'next/image'
@@ -13,8 +15,6 @@ import Image, { StaticImageData } from 'next/image'
 type Props = {
 	src: StaticImageData
 	alt: string
-	iconStyles: string
-	isSelected?: boolean
 }
 
 /**
@@ -23,16 +23,14 @@ type Props = {
  *
  * @param src source of the image
  * @param alt alternative text for the image
- * @param iconStyles general styling for the icons
- * @param isSelected boolean determining whether the
- *                   icon is seleted
  * @returns `ButtonIcon` components
  */
-export default function ButtonIcon({ src, alt, iconStyles, isSelected }: Props): JSX.Element {
+export default function ButtonIcon({ src, alt }: Props) {
+	const iconStyles = useContext(IconContext)
+
 	return (
 		<button className={iconStyles}>
 			<Image src={src} alt={alt} />
-			{isSelected && <SelectionBar />}
 		</button>
 	)
 }

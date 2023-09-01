@@ -8,20 +8,16 @@ import LinkIcon from '../LinkIcon'
 /**
  * Props for `OrderIcon` component.
  */
-type Props = {
-	isSelected: boolean
-	iconStyles: string
-}
+type Props = { isSelected: boolean }
 
 /**
  * Order Icon in `Sidebar`. Redirects
  * to the `Order` page.
  *
  * @param isSelected boolean determining whether the
- *                   icon is seleted
- * @param iconStyles general styling of the icon
+ *                   icon is selected
  * @returns `OrderIcon` component
  */
-export default function OrderIcon({ isSelected, iconStyles }: Props) {
-	return <LinkIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt='Order Icon' href='/' iconStyles={iconStyles} isSelected={isSelected} />
+export default function OrderIcon({ isSelected }: Props) {
+	return <LinkIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt='Order Icon' href='/' isSelected={isSelected} />
 }
