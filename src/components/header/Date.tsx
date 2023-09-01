@@ -16,15 +16,15 @@ export default function Time() {
 	const [{ weekDay, date, time }, setDate] = useState(getCurrentDate())
 
 	useEffect(() => {
-		const interval = setInterval(() => setDate(getCurrentDate()), 1000)
+		const interval = setInterval(() => setDate(getCurrentDate()))
 		return () => clearInterval(interval)
 	}, [])
 
 	return (
 		<time className='flex flex-col gap-2 text-2xl items-end'>
-			<span className='text-main-blue'>{weekDay}</span>
-			<span>{date}</span>
-			<span className='text-main-blue'>{time}</span>
+			<span className='text-main-blue' suppressHydrationWarning>{weekDay}</span>
+			<span suppressHydrationWarning>{date}</span>
+			<span className='text-main-blue' suppressHydrationWarning>{time}</span>
 		</time>
 	)
 }
