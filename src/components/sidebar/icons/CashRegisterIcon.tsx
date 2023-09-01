@@ -1,8 +1,8 @@
 // SVG
-import CashRegisterSVG from '@public/cash-register-icon.svg'
+import CashRegisterSVG from "@public/cash-register-icon.svg"
 
 // Components
-import ButtonIcon from '@components/sidebar/ButtonIcon'
+import ButtonIcon from "../ButtonIcon"
 
 /**
  * Cash Register Icon in `Sidebar`. Opens
@@ -11,5 +11,5 @@ import ButtonIcon from '@components/sidebar/ButtonIcon'
  * @returns `CashRegisterIcon` component
  */
 export default function CashRegisterIcon() {
-	return <ButtonIcon src={CashRegisterSVG} alt='Cash Register Icon' />
+  return <ButtonIcon src={CashRegisterSVG} alt="Cash Register Icon" />
 }

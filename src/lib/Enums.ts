@@ -3,7 +3,7 @@
  * can be selected.
  */
 export const enum SelectedIcons {
-	House,
-	Order,
-	Tender
+  House,
+  Order,
+  Tender
 }

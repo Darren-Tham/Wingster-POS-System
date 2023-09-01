@@ -1,9 +1,9 @@
 // Components
-import LinkIcon from '../LinkIcon'
+import LinkIcon from "../LinkIcon"
 
 // SVG
-import HouseGraySVG from '@public/house-gray-icon.svg'
-import HouseBlueSVG from '@public/house-blue-icon.svg'
+import HouseGraySVG from "@public/house-gray-icon.svg"
+import HouseBlueSVG from "@public/house-blue-icon.svg"
 
 /**
  * Props for `HouseIcon` component.
@@ -19,5 +19,12 @@ type Props = { isSelected: boolean }
  * @returns `HouseIcon` component
  */
 export default function HouseIcon({ isSelected }: Props) {
-	return <LinkIcon src={isSelected ? HouseBlueSVG : HouseGraySVG} alt='House Icon' href='/' isSelected={isSelected} />
+  return (
+    <LinkIcon
+      src={isSelected ? HouseBlueSVG : HouseGraySVG}
+      alt="House Icon"
+      href="/"
+      isSelected={isSelected}
+    />
+  )
 }

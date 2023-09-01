@@ -5,5 +5,13 @@
  * @returns `CategoryBar` component
  */
 export default function CategoryBar() {
-    return <></>
+  return (
+    <div className="flex">
+      <div>All</div>
+      <div>Appetizer</div>
+      <div>Entrees</div>
+      <div>Desserts</div>
+      <div>Drinks</div>
+    </div>
+  )
 }

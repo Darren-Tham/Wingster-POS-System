@@ -1,8 +1,8 @@
 // SVG
-import LogoutSVG from '@public/logout-icon.svg'
+import LogoutSVG from "@public/logout-icon.svg"
 
 // Components
-import ButtonIcon from '@components/sidebar/ButtonIcon'
+import ButtonIcon from "../ButtonIcon"
 
 /**
  * Logout Icon in `Sidebar`. Logs out
@@ -11,5 +11,5 @@ import ButtonIcon from '@components/sidebar/ButtonIcon'
  * @returns `LogoutIcon` component
  */
 export default function LogoutIcon() {
-	return <ButtonIcon src={LogoutSVG} alt='Logout Icon' />
+  return <ButtonIcon src={LogoutSVG} alt="Logout Icon" />
 }

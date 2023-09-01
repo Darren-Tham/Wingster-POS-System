@@ -1,6 +1,6 @@
 // Components
-import HeaderCell from './HeaderCell'
-import ButtonCell from './ButtonCell'
+import HeaderCell from "./HeaderCell"
+import ButtonCell from "./ButtonCell"
 
 /**
  * Type that describe the name of
@@ -8,8 +8,8 @@ import ButtonCell from './ButtonCell'
  * page it links to.
  */
 type ButtonCell = {
-	name: string
-	href: string
+  name: string
+  href: string
 }
 
 /**
@@ -21,7 +21,9 @@ type ButtonCell = {
  * @returns array of `HeaderCell` components
  */
 function getHeaderCells(headerCells: string[], cellStyles: string) {
-	return headerCells.map(name => <HeaderCell key={name} name={name} cellStyles={cellStyles} />)
+  return headerCells.map(name => (
+    <HeaderCell key={name} name={name} cellStyles={cellStyles} />
+  ))
 }
 
 /**
@@ -33,7 +35,9 @@ function getHeaderCells(headerCells: string[], cellStyles: string) {
  * @returns array of `ButtonCell` components
  */
 function getButtonCells(buttonCells: ButtonCell[], cellStyles: string) {
-	return buttonCells.map(({ name, href }) => <ButtonCell key={name} name={name} href={href} cellStyles={cellStyles} />)
+  return buttonCells.map(({ name, href }) => (
+    <ButtonCell key={name} name={name} href={href} cellStyles={cellStyles} />
+  ))
 }
 
 /**
@@ -43,27 +47,28 @@ function getButtonCells(buttonCells: ButtonCell[], cellStyles: string) {
  * @returns `Grid` component
  */
 export default function Grid() {
-	const headerCells = ['Orders', ' Payments', 'History', 'Settings']
-	const buttonCells: ButtonCell[] = [
-		{ name: 'Quick Order', href: '/' },
-		{ name: 'Tender', href: '/' },
-		{ name: 'Order History', href: '/' },
-		{ name: 'Inventory Settings', href: '/inventory' },
-		{ name: 'Cosmic Order', href: '/' },
-		{ name: 'Pay Out', href: '/' },
-		{ name: 'System History', href: '/' },
-		{ name: 'User Settings', href: '/' },
-		{ name: 'Catering + Schedule', href: '/' },
-		{ name: 'Open Cash Drawer', href: '/' },
-		{ name: 'Trends', href: '/' },
-		{ name: 'Time Card', href: '/' }
-	]
-	const cellStyles = 'max-sm:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-3xl rounded-xl drop-shadow-md p-6 w-full h-full flex justify-center items-center text-center'
+  const headerCells = ["Orders", " Payments", "History", "Settings"]
+  const buttonCells: ButtonCell[] = [
+    { name: "Quick Order", href: "/" },
+    { name: "Tender", href: "/" },
+    { name: "Order History", href: "/" },
+    { name: "Inventory Settings", href: "/inventory" },
+    { name: "Cosmic Order", href: "/" },
+    { name: "Pay Out", href: "/" },
+    { name: "System History", href: "/" },
+    { name: "User Settings", href: "/" },
+    { name: "Catering + Schedule", href: "/" },
+    { name: "Open Cash Drawer", href: "/" },
+    { name: "Trends", href: "/" },
+    { name: "Time Card", href: "/" }
+  ]
+  const cellStyles =
+    "max-sm:text-sm sm:text-md md:text-xl lg:text-2xl xl:text-3xl rounded-xl drop-shadow-md p-6 w-full h-full flex justify-center items-center text-center"
 
-	return (
-		<section className='grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center'>
-			{getHeaderCells(headerCells, cellStyles)}
-			{getButtonCells(buttonCells, cellStyles)}
-		</section>
-	)
+  return (
+    <section className="grid grid-rows-4 grid-cols-4 grow gap-3 place-items-center">
+      {getHeaderCells(headerCells, cellStyles)}
+      {getButtonCells(buttonCells, cellStyles)}
+    </section>
+  )
 }
