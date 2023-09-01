@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
 // Moment
-import moment from 'moment'
+import moment from "moment"
 
 // React
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 
 /**
  * Displays the time along with the
@@ -13,20 +13,24 @@ import { useState, useEffect } from 'react'
  * @returns `Time` component
  */
 export default function Time() {
-	const [{ weekDay, date, time }, setDate] = useState(getCurrentDate())
+  const [{ weekDay, date, time }, setDate] = useState(getCurrentDate())
 
-	useEffect(() => {
-		const interval = setInterval(() => setDate(getCurrentDate()))
-		return () => clearInterval(interval)
-	}, [])
+  useEffect(() => {
+    const interval = setInterval(() => setDate(getCurrentDate()))
+    return () => clearInterval(interval)
+  }, [])
 
-	return (
-		<time className='flex flex-col gap-2 text-2xl items-end'>
-			<span className='text-main-blue' suppressHydrationWarning>{weekDay}</span>
-			<span suppressHydrationWarning>{date}</span>
-			<span className='text-main-blue' suppressHydrationWarning>{time}</span>
-		</time>
-	)
+  return (
+    <time className="flex flex-col gap-2 text-2xl items-end">
+      <span className="text-main-blue" suppressHydrationWarning>
+        {weekDay}
+      </span>
+      <span suppressHydrationWarning>{date}</span>
+      <span className="text-main-blue" suppressHydrationWarning>
+        {time}
+      </span>
+    </time>
+  )
 }
 
 /**
@@ -40,9 +44,9 @@ export default function Time() {
  * @returns current date
  */
 function getCurrentDate() {
-	return {
-		weekDay: moment().format('dddd'),
-		date: moment().format('MMMM Do, YYYY'),
-		time: moment().format('h:mm:ss A')
-	}
+  return {
+    weekDay: moment().format("dddd"),
+    date: moment().format("MMMM Do, YYYY"),
+    time: moment().format("h:mm:ss A")
+  }
 }

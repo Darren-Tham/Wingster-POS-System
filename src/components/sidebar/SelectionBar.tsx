@@ -6,5 +6,7 @@
  * @returns `SelectionBar` component
  */
 export default function SelectionBar() {
-	return <div className='absolute right-0 w-1 h-full bg-main-blue rounded-full'></div>
+  return (
+    <div className="absolute right-0 w-1 h-full bg-main-blue rounded-full"></div>
+  )
 }

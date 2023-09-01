@@ -1,9 +1,9 @@
 // SVG
-import OrderGraySVG from '@public/order-gray-icon.svg'
-import OrderBlueSVG from '@public/order-blue-icon.svg'
+import OrderGraySVG from "@public/order-gray-icon.svg"
+import OrderBlueSVG from "@public/order-blue-icon.svg"
 
 // Components
-import LinkIcon from '../LinkIcon'
+import LinkIcon from "../LinkIcon"
 
 /**
  * Props for `OrderIcon` component.
@@ -19,5 +19,12 @@ type Props = { isSelected: boolean }
  * @returns `OrderIcon` component
  */
 export default function OrderIcon({ isSelected }: Props) {
-	return <LinkIcon src={isSelected ? OrderBlueSVG : OrderGraySVG} alt='Order Icon' href='/' isSelected={isSelected} />
+  return (
+    <LinkIcon
+      src={isSelected ? OrderBlueSVG : OrderGraySVG}
+      alt="Order Icon"
+      href="/"
+      isSelected={isSelected}
+    />
+  )
 }

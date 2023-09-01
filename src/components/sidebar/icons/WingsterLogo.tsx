@@ -1,11 +1,11 @@
 // React
-import { JSX } from 'react'
+import { JSX } from "react"
 
 // Next
-import Image from 'next/image'
+import Image from "next/image"
 
 // Logo
-import WingsterPNG from '@public/wingster-logo.png'
+import WingsterPNG from "@public/wingster-logo.png"
 
 /**
  * Wingster Icon in `Sidebar`.
@@ -13,9 +13,15 @@ import WingsterPNG from '@public/wingster-logo.png'
  * @returns `WingsterLogo` component
  */
 export default function WingsterLogo(): JSX.Element {
-	return (
-		<div className='my-8'>
-			<Image width='70' height='70' src={WingsterPNG} alt='Wingster Icon' unoptimized />
-		</div>
-	)
+  return (
+    <div className="my-8">
+      <Image
+        width="70"
+        height="70"
+        src={WingsterPNG}
+        alt="Wingster Icon"
+        unoptimized
+      />
+    </div>
+  )
 }
