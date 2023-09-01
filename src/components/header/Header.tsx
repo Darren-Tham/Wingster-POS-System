@@ -1,25 +1,25 @@
 // Components
-import Time from './Time'
+import Date from './Date'
 import SearchBar from './SearchBar'
 
 /**
  * Props for the `Header` component.
  */
 type Props = {
-	showTime: boolean
+	showDate: boolean
 	showSearchBar: boolean
 }
 
 /**
  * Main header of each page.
  *
- * @param showTime boolean determining whether to
- *                 show the time in `Header`
+ * @param showDate boolean determining whether to
+ *                 show the date in `Header`
  * @param showSearchBar boolean determing whether to
  *                      show the search bar in `Header`
  * @returns `Header` component
  */
-export default function Header({ showTime, showSearchBar }: Props) {
+export default function Header({ showDate , showSearchBar }: Props) {
 	return (
 		<header className='flex justify-between'>
 			<div>
@@ -28,7 +28,7 @@ export default function Header({ showTime, showSearchBar }: Props) {
 				<span className='text-2xl'>Wings & K-Food</span>
 			</div>
 			<div>
-				{showTime && <Time />}
+				{showDate && <Date />}
 				{showSearchBar && <SearchBar />}
 			</div>
 		</header>

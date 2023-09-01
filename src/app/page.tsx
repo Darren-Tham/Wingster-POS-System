@@ -19,7 +19,7 @@ export default function Home() {
 		<div className='flex'>
 			<Sidebar currentIcon={SelectedIcons.House} />
 			<main className={`${MAIN_BACKGROUND_STYLES} gap-10`}>
-				<Header showTime={true} showSearchBar={false} />
+				<Header showDate={true} showSearchBar={false} />
 				<Grid />
 			</main>
 		</div>

@@ -16,7 +16,7 @@ export default function Inventory() {
 		<div className='flex'>
 			<Sidebar />
 			<main className={`${MAIN_BACKGROUND_STYLES}`}>
-				<Header showTime={false} showSearchBar={true} />
+				<Header showDate={false} showSearchBar={true} />
 			</main>
 		</div>
 	)
