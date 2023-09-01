@@ -1,10 +1,10 @@
 // Components
-import Header from '@components/header/Header'
-import Sidebar from '@components/sidebar/Sidebar'
-import Grid from '@components/home/Grid'
+import Header from '@/components/header/Header'
+import Sidebar from '@/components/sidebar/Sidebar'
+import Grid from '@/components/home/Grid'
 
 // Constants
-import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
+import { MAIN_BACKGROUND_STYLES } from '@/lib/Constants'
 
 // Enums
 import { SelectedIcons } from '@/lib/Enums'

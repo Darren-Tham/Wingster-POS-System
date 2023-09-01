@@ -1,9 +1,10 @@
 // Components
 import Header from '@/components/header/Header'
-import Sidebar from '@components/sidebar/Sidebar'
+import Sidebar from '@/components/sidebar/Sidebar'
+import CategoryBar from '@/components/CategoryBar'
 
 // Constants
-import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
+import { MAIN_BACKGROUND_STYLES } from '@/lib/Constants'
 
 /**
  * Page that stores the products in

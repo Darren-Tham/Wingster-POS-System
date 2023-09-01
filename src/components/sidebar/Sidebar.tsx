@@ -4,13 +4,13 @@
 import IconContext from '@/context/IconContext'
 
 // Components
-import WingsterLogo from '@components/sidebar/icons/WingsterLogo'
-import HouseIcon from '@components/sidebar/icons/HouseIcon'
-import OrderIcon from '@components/sidebar/icons/OrderIcon'
-import TenderIcon from '@components/sidebar/icons/TenderIcon'
-import CashRegisterIcon from '@components/sidebar/icons/CashRegisterIcon'
-import LanguageIcon from '@components/sidebar/icons/LanguageIcon'
-import LogoutIcon from '@components/sidebar/icons/LogoutIcon'
+import WingsterLogo from './icons/WingsterLogo'
+import HouseIcon from './icons/HouseIcon'
+import OrderIcon from './icons/OrderIcon'
+import TenderIcon from './icons/TenderIcon'
+import CashRegisterIcon from './icons/CashRegisterIcon'
+import LanguageIcon from './icons/LanguageIcon'
+import LogoutIcon from './icons/LogoutIcon'
 
 // Enums
 import { SelectedIcons } from '@/lib/Enums'
