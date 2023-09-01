@@ -1,4 +1,8 @@
-export const enum Icons {
+/**
+ * Enum specifying with icons
+ * can be selected.
+ */
+export const enum SelectedIcons {
 	House,
 	Order,
 	Tender

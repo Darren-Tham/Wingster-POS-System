@@ -1,6 +1,9 @@
 // Next
 import Link from 'next/link'
 
+/**
+ * Props for `ButtonCell` component.
+ */
 type Props = {
 	name: string
 	href: string
@@ -11,7 +14,9 @@ type Props = {
  * Buttons in the grid from the `Home`
  * page that links to different pages.
  *
- * @param Props props of `ButtonCell`
+ * @param name name of the `ButtonCell`
+ * @param href relative path to another page
+ * @param cellStyles general styling of a cell
  * @returns `ButtonCell` component
  */
 export default function ButtonCell({ name, href, cellStyles }: Props) {

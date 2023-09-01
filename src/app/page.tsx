@@ -7,19 +7,20 @@ import Grid from '@components/home/Grid'
 import { MAIN_BACKGROUND_STYLES } from '@lib/Constants'
 
 // Enums
-import { Icons } from '@/lib/Enums'
+import { SelectedIcons } from '@/lib/Enums'
 
 /**
  * Home page of the application.
+ *
  * @returns `Home` page
  */
 export default function Home() {
 	return (
 		<div className='flex'>
-			<Sidebar currentIcon={Icons.House} />
+			<Sidebar currentIcon={SelectedIcons.House} />
 			<main className={`${MAIN_BACKGROUND_STYLES} gap-10`}>
-                <Header showSearchBar={false} />
-                <Grid />
+				<Header showTime={true} showSearchBar={false} />
+				<Grid />
 			</main>
 		</div>
 	)

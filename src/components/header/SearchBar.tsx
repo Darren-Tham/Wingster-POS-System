@@ -4,6 +4,12 @@ import search from '@public/search-icon.svg'
 //Next
 import Image from 'next/image'
 
+/**
+ * A search bar that allows the user
+ * to search for a specific product.
+ *
+ * @returns `SearchBar` component
+ */
 export default function SearchBar() {
 	return (
 		<div className='flex bg-white drop-shadow-lg rounded-lg p-2 gap-2'>

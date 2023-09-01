@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react'
 /**
  * Displays the time along with the
  * date and day.
+ *
+ * @returns `Time` component
  */
 export default function Time() {
 	const [date, setDate] = useState(new Date())

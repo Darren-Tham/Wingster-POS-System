@@ -1,3 +1,6 @@
+/**
+ * Props for `LanguageIcon` component.
+ */
 type Props = {
     iconStyles: string
 }
@@ -6,7 +9,7 @@ type Props = {
  * Lanuage Icon in `Sidebar`. Toggles
  * different languages for the application.
  *
- * @param Props `LanguageIcon` props
+ * @param iconStyles general styling of the icon
  * @returns `LanguageIcon` component
  */
 export default function LanguageIcon({ iconStyles }: Props) {

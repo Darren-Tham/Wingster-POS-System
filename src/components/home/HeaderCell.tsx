@@ -1,3 +1,6 @@
+/**
+ * Props for the `HeaderCell` components.
+ */
 type Props = {
 	name: string
 	cellStyles: string
@@ -8,11 +11,10 @@ type Props = {
  * page that describes the purpose of
  * each column.
  *
- * @param Props props of `HeaderCell`
+ * @param name name of the `HeaderCell`
+ * @param cellStyles general styling of the cell
  * @returns `HeaderCell` component
  */
 export default function HeaderCell({ name, cellStyles }: Props) {
-	return (
-		<div className={`${cellStyles} bg-gradient-to-br from-main-light-blue to-main-blue text-white select-none cursor-default`}>{name}</div>
-	)
+	return <div className={`${cellStyles} bg-gradient-to-br from-main-light-blue to-main-blue text-white select-none cursor-default`}>{name}</div>
 }

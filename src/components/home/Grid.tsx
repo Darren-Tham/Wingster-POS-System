@@ -2,6 +2,11 @@
 import HeaderCell from './HeaderCell'
 import ButtonCell from './ButtonCell'
 
+/**
+ * Type that describe the name of
+ * `ButtonCell` and the `href` of the
+ * page it links to.
+ */
 type ButtonCell = {
 	name: string
 	href: string
@@ -34,6 +39,8 @@ function getButtonCells(buttonCells: ButtonCell[], cellStyles: string) {
 /**
  * Grid that links to different pages
  * of the application for the `Home` page.
+ *
+ * @returns `Grid` component
  */
 export default function Grid() {
 	const headerCells = ['Orders', ' Payments', 'History', 'Settings']
