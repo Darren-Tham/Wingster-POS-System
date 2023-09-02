@@ -1,15 +1,8 @@
-// React
-import type { Dispatch, SetStateAction } from "react"
-
-// Components
-import PopupBlocker from "./PopupBlocker"
-
 /**
  * Props for `Popup` component.
  */
 type Props = {
   showPopup: boolean
-  setShowPopup: Dispatch<SetStateAction<boolean>>
   popupButtons: PopupButton[]
   textColor: string
   horizontalDirection: "left" | "right"
@@ -26,8 +19,6 @@ export type PopupButton = {
  *
  * @param showPopup boolean determining the
  *                     visibility of a popup
- * @param setShowPopup function that sets the
- *                        visibility of a popup
  * @param popupButtons list of objects with the name of
  *                the button and the onclick event
  *                listener
@@ -38,34 +29,30 @@ export type PopupButton = {
  */
 export default function Popup({
   showPopup,
-  setShowPopup,
   popupButtons,
   textColor,
   horizontalDirection
 }: Props) {
   return (
-    <>
-      <PopupBlocker showPopup={showPopup} setShowPopup={setShowPopup} />
-      <div
-        className={`${
-          showPopup ? "visible opacity-1" : "invisible opacity-0"
-        } ${textColor} ${
-          horizontalDirection === "left" ? "right-3/4" : "left-3/4"
-        } absolute bg-white bottom-3/4 rounded-lg drop-shadow-md transition-all`}
-        /**
-         * Without this style, the transition with the drop-shadow will not work.
-         * This trick is called `null transform hack`.
-         *
-         * @see https://stackoverflow.com/a/48748402/22490464
-         * @see https://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
-         */
-        style={{
-          transform: `translate3d(0,0,0) scale(${showPopup ? 1 : 0.75})`
-        }}
-      >
-        {getPopupButtonElements(popupButtons)}
-      </div>
-    </>
+    <div
+      className={`${
+        showPopup ? "visible opacity-1" : "invisible opacity-0"
+      } ${textColor} ${
+        horizontalDirection === "left" ? "right-3/4" : "left-3/4"
+      } absolute bg-white bottom-3/4 rounded-lg drop-shadow-md transition-all`}
+      /**
+       * Without this style, the transition with the drop-shadow will not work.
+       * This trick is called `null transform hack`.
+       *
+       * @see https://stackoverflow.com/a/48748402/22490464
+       * @see https://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
+       */
+      style={{
+        transform: `translate3d(0,0,0) scale(${showPopup ? 1 : 0.75})`
+      }}
+    >
+      {getPopupButtonElements(popupButtons)}
+    </div>
   )
 }
 

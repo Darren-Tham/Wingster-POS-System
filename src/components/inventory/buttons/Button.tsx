@@ -8,6 +8,7 @@ import { useState } from "react"
 
 // Components
 import Popup, { PopupButton } from "./popup/Popup"
+import PopupBlocker from "./popup/PopupBlocker"
 
 type Props = {
   src: StaticImageData
@@ -44,20 +45,22 @@ export default function Button({
 }: Props) {
   const [showPopup, setShowPopup] = useState(false)
   return (
-    <div className="rounded-full relative">
-      <button
-        className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
-        onClick={() => setShowPopup(true)}
-      >
-        <Image src={src} alt={alt} width={50} height={50} />
-      </button>
-      <Popup
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-        popupButtons={popupButtons}
-        textColor={textColor}
-        horizontalDirection={horizontalDirection}
-      />
-    </div>
+    <>
+      <PopupBlocker showPopup={showPopup} setShowPopup={setShowPopup} />
+      <div className={`rounded-full relative ${showPopup ? "z-20" : ""}`}>
+        <button
+          className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
+          onClick={() => setShowPopup(!showPopup)}
+        >
+          <Image src={src} alt={alt} width={50} height={50} />
+        </button>
+        <Popup
+          showPopup={showPopup}
+          popupButtons={popupButtons}
+          textColor={textColor}
+          horizontalDirection={horizontalDirection}
+        />
+      </div>
+    </>
   )
 }
