@@ -15,7 +15,7 @@ export default function SearchBar() {
     <div className="flex bg-white drop-shadow-lg rounded-lg p-2 gap-2">
       <Image src={search} alt="Search Icon" width={30} height={30} />
       <input
-        className="placeholder:text-neutral-300 text-lg"
+        className="placeholder:text-neutral-300 text-lg outline-none"
         placeholder="Search product... "
       />
     </div>

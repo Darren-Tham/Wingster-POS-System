@@ -1,7 +1,7 @@
 "use client"
 
 // Context
-import IconContext from "@/context/IconContext"
+import IconContext from "@/components/sidebar/IconContext"
 
 // Components
 import WingsterLogo from "./icons/WingsterLogo"

@@ -4,7 +4,7 @@
 import { useContext } from "react"
 
 // Context
-import IconContext from "@/context/IconContext"
+import IconContext from "@/components/sidebar/IconContext"
 
 // Next
 import Link from "next/link"
