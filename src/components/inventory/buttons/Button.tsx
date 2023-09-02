@@ -47,7 +47,7 @@ export default function Button({
   return (
     <>
       <PopupBlocker showPopup={showPopup} setShowPopup={setShowPopup} />
-      <div className={`rounded-full relative ${showPopup ? "z-20" : ""}`}>
+      <div className={`rounded-full relative ${showPopup ? "z-20" : ""} select-none`}>
         <button
           className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
           onClick={() => setShowPopup(!showPopup)}
