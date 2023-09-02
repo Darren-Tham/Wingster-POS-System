@@ -18,7 +18,7 @@ import DeleteButton from "./DeleteButton"
  * @returns `InventoryButtons` component
  */
 export default function InventoryButtons() {
-  const buttonStyles = "bg-gradient-to-br rounded-full p-2 drop-shadow-md"
+  const buttonStyles = "bg-gradient-to-br rounded-full p-2 drop-shadow-md hover:opacity-95"
   const imgSize = 50
   const buttonContextValue = useMemo(() => ({ buttonStyles, imgSize }), [])
 

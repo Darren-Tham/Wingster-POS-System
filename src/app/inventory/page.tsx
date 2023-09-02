@@ -17,9 +17,11 @@ export default function Inventory() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className={`${MAIN_BACKGROUND_STYLES}`}>
-        <Header showDate={false} showSearchBar={true} />
-        <CategoryBar />
+      <main className={`${MAIN_BACKGROUND_STYLES} justify-between`}>
+        <div className="flex flex-col gap-10">
+          <Header showDate={false} showSearchBar={true} />
+          <CategoryBar />
+        </div>
         <InventoryButtons />
       </main>
     </div>
