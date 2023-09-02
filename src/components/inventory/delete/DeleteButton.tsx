@@ -4,13 +4,14 @@
 import { useContext } from "react"
 
 // Context
-import ButtonContext from "./ButtonContext"
+import ButtonContext from "../ButtonContext"
 
 // SVG
 import WhiteCross from "@public/white-cross.svg"
 
 // Next
 import Image from "next/image"
+import DeletePopup from "./DeletePopup"
 
 /**
  * Button that allows the user to delete
@@ -20,15 +21,16 @@ import Image from "next/image"
  * @returns `DeleteButton` component
  */
 export default function DeleteButton() {
-  const { buttonStyles, imgSize } = useContext(ButtonContext)
+  const { circleStyles, imgSize } = useContext(ButtonContext)
   return (
-    <button className={`${buttonStyles} from-red-400 to-red-500`}>
+    <button className={`${circleStyles} from-red-400 to-red-500`}>
       <Image
         src={WhiteCross}
         alt="White Cross Icon"
         width={imgSize}
         height={imgSize}
       />
+      <DeletePopup />
     </button>
   )
 }

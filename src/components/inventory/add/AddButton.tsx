@@ -4,7 +4,10 @@
 import { useContext } from "react"
 
 // Context
-import ButtonContext from "./ButtonContext"
+import ButtonContext from "../ButtonContext"
+
+// Components
+import AddPopup from "./AddPopup"
 
 // Next
 import Image from "next/image"
@@ -20,15 +23,16 @@ import WhitePlus from "@public/white-plus.svg"
  * @returns `AddButton` component
  */
 export default function AddButton() {
-  const { buttonStyles, imgSize } = useContext(ButtonContext)
+  const { circleStyles, imgSize } = useContext(ButtonContext)
   return (
-    <button className={`${buttonStyles} from-main-light-blue to-main-blue`}>
+    <button className={`${circleStyles} from-main-light-blue to-main-blue`}>
       <Image
         src={WhitePlus}
         alt="White Plus Icon"
         width={imgSize}
         height={imgSize}
       />
+      <AddPopup />
     </button>
   )
 }

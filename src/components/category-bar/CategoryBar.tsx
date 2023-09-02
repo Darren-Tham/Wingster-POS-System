@@ -15,10 +15,12 @@ import ArrowContext from "./arrows/ArrowContext"
  * @returns `CategoryBar` component
  */
 export default function CategoryBar() {
-  const arrowStyles =
-    "flex justify-center items-center hover:bg-neutral-100"
+  const arrowStyles = "flex justify-center items-center hover:bg-neutral-100"
   return (
-    <section className="grid bg-white rounded-xl drop-shadow-md" style={{ gridTemplateColumns: "4rem auto 4rem"}}>
+    <section
+      className="grid bg-white rounded-xl drop-shadow-md"
+      style={{ gridTemplateColumns: "4rem auto 4rem" }}
+    >
       <ArrowContext.Provider value={arrowStyles}>
         <LeftArrow />
         <Bars />

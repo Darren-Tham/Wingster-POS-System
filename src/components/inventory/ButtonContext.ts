@@ -3,12 +3,16 @@
 import { createContext } from "react"
 
 type ButtonStyles = {
-  buttonStyles: string
+  circleStyles: string
   imgSize: number
+  popupContainerStyles: string
+  popupEntryStyles: string
 }
 
 const ButtonContext = createContext<ButtonStyles>({
-  buttonStyles: "",
-  imgSize: 0
+  circleStyles: "",
+  imgSize: 0,
+  popupContainerStyles: "",
+  popupEntryStyles: ""
 })
 export default ButtonContext
