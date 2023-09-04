@@ -1,5 +1,5 @@
 // Components
-import Header from "@/components/header/Header"
+import Header from "@/components/inventory/Header"
 import Sidebar from "@/components/sidebar/Sidebar"
 import CategoryBar from "@/components/category-bar/CategoryBar"
 import InventoryButtons from "@/components/inventory/buttons/InventoryButtons"
@@ -19,7 +19,7 @@ export default function Inventory() {
       <Sidebar />
       <main className={`${MAIN_BACKGROUND_STYLES} justify-between`}>
         <div className="flex flex-col gap-10">
-          <Header showDate={false} showSearchBar={true} />
+          <Header />
           <CategoryBar />
         </div>
         <InventoryButtons />
