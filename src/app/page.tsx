@@ -1,5 +1,5 @@
 // Components
-import Header from "@/components/header/Header"
+import Header from "@/components/home/Header"
 import Sidebar from "@/components/sidebar/Sidebar"
 import Grid from "@/components/home/Grid"
 
@@ -19,7 +19,7 @@ export default function Home() {
     <div className="flex">
       <Sidebar currentIcon={SelectedIcons.House} />
       <main className={`${MAIN_BACKGROUND_STYLES} gap-10`}>
-        <Header showDate={true} showSearchBar={false} />
+        <Header />
         <Grid />
       </main>
     </div>
