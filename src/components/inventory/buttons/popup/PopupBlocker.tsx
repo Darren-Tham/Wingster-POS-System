@@ -27,9 +27,9 @@ type Props = {
 export default function PopupBlocker({ showPopup, setShowPopup }: Props) {
   return (
     <button
-      className={`fixed inset-0 bg-black opacity-10 ${
-        showPopup ? "visible" : "invisible"
-      } cursor-default ${showPopup ? "z-10" : ""}`}
+      className={`fixed inset-0 bg-black ${
+        showPopup ? "visible opacity-20" : "invisible opacity-0"
+      } cursor-default ${showPopup ? "z-10" : ""} transition-all`}
       onClick={() => setShowPopup(false)}
     />
   )
