@@ -1,6 +1,6 @@
 // SVG
 import WhitePlus from "@public/white-plus.svg"
-import Button from "./Button"
+import Button from "../InventoryButton"
 
 /**
  * Button that allows the user to add

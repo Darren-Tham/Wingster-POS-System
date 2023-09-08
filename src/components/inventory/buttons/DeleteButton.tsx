@@ -2,7 +2,7 @@
 import WhiteCross from "@public/white-cross.svg"
 
 // Next
-import Button from "./Button"
+import Button from "./InventoryButton"
 
 /**
  * Button that allows the user to delete

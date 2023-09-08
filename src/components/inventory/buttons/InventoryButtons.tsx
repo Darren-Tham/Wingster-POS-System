@@ -1,7 +1,7 @@
 "use client"
 
 // Components
-import AddButton from "./AddButton"
+import AddButton from "./add/AddButton"
 import DeleteButton from "./DeleteButton"
 
 /**
