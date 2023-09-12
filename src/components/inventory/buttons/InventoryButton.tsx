@@ -4,7 +4,7 @@
 import Image, { StaticImageData } from "next/image"
 
 // React
-import { useState } from "react"
+import { Dispatch, SetStateAction } from "react"
 
 // Components
 import Popup, { PopupButton } from "./popup/Popup"
@@ -17,6 +17,8 @@ type Props = {
   gradientColors: string
   textColor: string
   horizontalDirection: "left" | "right"
+  showActionsPopup: boolean
+  setShowActionPopup: Dispatch<SetStateAction<boolean>>
 }
 
 /**
@@ -33,29 +35,40 @@ type Props = {
  * @param textColor color of the popup button text
  * @param horizontalDirection the horizontal direction where
  *                            the popup appears
+ * @param showActionsPopup determines whether the actions buttons
+ *                         are visible
+ * @param setShowActionPopup sets the boolean `showActionsPopup`
  * @returns `Button` component
  */
-export default function Button({
+export default function InventoryButton({
   src,
   alt,
   popupButtons,
   gradientColors,
   textColor,
-  horizontalDirection
+  horizontalDirection,
+  showActionsPopup,
+  setShowActionPopup
 }: Props) {
-  const [showPopup, setShowPopup] = useState(false)
   return (
     <>
-      <PopupBlocker showPopup={showPopup} setShowPopup={setShowPopup} />
-      <div className={`rounded-full relative ${showPopup ? "z-20" : ""} select-none`}>
+      <PopupBlocker
+        showActionsPopup={showActionsPopup}
+        setShowActionsPopup={setShowActionPopup}
+      />
+      <div
+        className={`rounded-full relative ${
+          showActionsPopup ? "z-20" : ""
+        } select-none`}
+      >
         <button
           className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
-          onClick={() => setShowPopup(!showPopup)}
+          onClick={() => setShowActionPopup(!showActionsPopup)}
         >
           <Image src={src} alt={alt} width={50} height={50} />
         </button>
         <Popup
-          showPopup={showPopup}
+          showActionsPopup={showActionsPopup}
           popupButtons={popupButtons}
           textColor={textColor}
           horizontalDirection={horizontalDirection}

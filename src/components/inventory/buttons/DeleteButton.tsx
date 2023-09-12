@@ -2,7 +2,7 @@
 import WhiteCross from "@public/white-cross.svg"
 
 // Next
-import Button from "./InventoryButton"
+import InventoryButton from "./InventoryButton"
 
 /**
  * Button that allows the user to delete
@@ -24,7 +24,7 @@ export default function DeleteButton() {
   ]
 
   return (
-    <Button
+    <InventoryButton
       src={WhiteCross}
       alt="White Cross Icon"
       popupButtons={popupButtons}

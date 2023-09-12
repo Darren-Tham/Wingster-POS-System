@@ -2,7 +2,7 @@
  * Props for `Popup` component.
  */
 type Props = {
-  showPopup: boolean
+  showActionsPopup: boolean
   popupButtons: PopupButton[]
   textColor: string
   horizontalDirection: "left" | "right"
@@ -28,7 +28,7 @@ export type PopupButton = {
  * @returns `Popup` component
  */
 export default function Popup({
-  showPopup,
+  showActionsPopup: showPopup,
   popupButtons,
   textColor,
   horizontalDirection
@@ -39,7 +39,7 @@ export default function Popup({
         showPopup ? "visible opacity-1" : "invisible opacity-0"
       } ${textColor} ${
         horizontalDirection === "left" ? "right-3/4" : "left-3/4"
-      } absolute bg-white bottom-3/4 rounded-lg drop-shadow-md transition-all`}
+      } absolute bg-white bottom-3/4 rounded-lg drop-shadow-md transition-all duration-500`}
       /**
        * Without this style, the transition with the drop-shadow will not work.
        * This trick is called `null transform hack`.

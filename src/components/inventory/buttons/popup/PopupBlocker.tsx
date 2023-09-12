@@ -7,8 +7,8 @@ import type { Dispatch, SetStateAction } from "react"
  * Props for `PopupBlocker` component.
  */
 type Props = {
-  showPopup: boolean
-  setShowPopup: Dispatch<SetStateAction<boolean>>
+  showActionsPopup: boolean
+  setShowActionsPopup: Dispatch<SetStateAction<boolean>>
 }
 
 /**
@@ -24,12 +24,15 @@ type Props = {
  *                        visibility of a popup
  * @returns `PopupBlocker` component
  */
-export default function PopupBlocker({ showPopup, setShowPopup }: Props) {
+export default function PopupBlocker({
+  showActionsPopup: showPopup,
+  setShowActionsPopup: setShowPopup
+}: Props) {
   return (
     <button
-      className={`fixed inset-0 bg-black ${
-        showPopup ? "visible opacity-20" : "invisible opacity-0"
-      } cursor-default ${showPopup ? "z-10" : ""} transition-all`}
+      className={`fixed inset-0 bg-opacity-20 ${
+        showPopup ? "visible backdrop-blur-sm bg-black" : "invisible"
+      } cursor-default ${showPopup ? "z-10" : ""} transition-all duration-500`}
       onClick={() => setShowPopup(false)}
     />
   )
