@@ -30,8 +30,8 @@ export default function AddCategoryPopup({
         className={`fixed inset-0 bg-opacity-20 ${
           showCategoryPopup
             ? "visible backdrop-blur-sm bg-black"
-            : "invisible"
-        } transition-all duration-500`}
+            : "invisible transition-all duration-500"
+        }`}
       />
       <div
         className={`fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-white drop-shadow-md rounded-lg p-7 flex flex-col gap-7 w-max transition-all duration-500 ${

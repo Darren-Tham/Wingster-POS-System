@@ -4,7 +4,7 @@
 import Image, { StaticImageData } from "next/image"
 
 // React
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useState, useEffect } from "react"
 
 // Components
 import Popup, { PopupButton } from "./popup/Popup"
@@ -50,11 +50,19 @@ export default function InventoryButton({
   showActionsPopup,
   setShowActionPopup
 }: Props) {
+  const [outsideIsClicked, setOutsideIsClicked] = useState(false)
+
+  useEffect(() => {
+    if (showActionsPopup) setOutsideIsClicked(false)
+  }, [showActionsPopup])
+
   return (
     <>
       <PopupBlocker
         showActionsPopup={showActionsPopup}
         setShowActionsPopup={setShowActionPopup}
+        outsideIsClicked={outsideIsClicked}
+        setOutsideIsClicked={setOutsideIsClicked}
       />
       <div
         className={`rounded-full relative ${
@@ -63,7 +71,10 @@ export default function InventoryButton({
       >
         <button
           className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
-          onClick={() => setShowActionPopup(!showActionsPopup)}
+          onClick={() => {
+            if (showActionsPopup) setOutsideIsClicked(true)
+            setShowActionPopup(!showActionsPopup)
+          }}
         >
           <Image src={src} alt={alt} width={50} height={50} />
         </button>

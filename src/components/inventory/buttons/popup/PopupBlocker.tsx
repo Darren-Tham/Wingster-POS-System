@@ -1,7 +1,7 @@
 "use client"
 
 // React
-import type { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from "react"
 
 /**
  * Props for `PopupBlocker` component.
@@ -9,6 +9,8 @@ import type { Dispatch, SetStateAction } from "react"
 type Props = {
   showActionsPopup: boolean
   setShowActionsPopup: Dispatch<SetStateAction<boolean>>
+  outsideIsClicked: boolean
+  setOutsideIsClicked: Dispatch<SetStateAction<boolean>>
 }
 
 /**
@@ -25,15 +27,22 @@ type Props = {
  * @returns `PopupBlocker` component
  */
 export default function PopupBlocker({
-  showActionsPopup: showPopup,
-  setShowActionsPopup: setShowPopup
+  showActionsPopup,
+  setShowActionsPopup,
+  outsideIsClicked,
+  setOutsideIsClicked
 }: Props) {
   return (
     <button
       className={`fixed inset-0 bg-opacity-20 ${
-        showPopup ? "visible backdrop-blur-sm bg-black" : "invisible"
-      } cursor-default ${showPopup ? "z-10" : ""} transition-all duration-500`}
-      onClick={() => setShowPopup(false)}
+        showActionsPopup
+          ? "visible backdrop-blur-sm bg-black transition-all duration-500"
+          : `invisible ${outsideIsClicked ? "transition-all duration-500" : ""}`
+      } cursor-default ${showActionsPopup ? "z-10" : ""}`}
+      onClick={() => {
+        setShowActionsPopup(false)
+        setOutsideIsClicked(true)
+      }}
     />
   )
 }
