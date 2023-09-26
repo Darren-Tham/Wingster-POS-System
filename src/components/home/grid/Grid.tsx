@@ -1,6 +1,6 @@
 // Components
-import HeaderCell from "./HeaderCell"
-import ButtonCell from "./ButtonCell"
+import HeaderCell from "./components/HeaderCell"
+import ButtonCell from "./components/ButtonCell"
 
 /**
  * Type that describe the name of

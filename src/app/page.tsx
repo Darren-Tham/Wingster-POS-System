@@ -1,7 +1,7 @@
 // Components
-import Header from "@/components/home/Header"
+import Header from "@/components/home/header/Header"
 import Sidebar from "@/components/sidebar/Sidebar"
-import Grid from "@/components/home/Grid"
+import Grid from "@/components/home/grid/Grid"
 
 // Constants
 import { MAIN_BACKGROUND_STYLES } from "@/lib/Constants"
