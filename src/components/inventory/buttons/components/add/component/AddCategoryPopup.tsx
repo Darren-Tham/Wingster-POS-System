@@ -34,7 +34,7 @@ export default function AddCategoryPopup({
         }`}
       />
       <div
-        className={`fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-white drop-shadow-md rounded-lg p-7 flex flex-col gap-7 w-max transition-all duration-500 ${
+        className={`fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-white drop-shadow-md rounded-xl p-7 flex flex-col gap-7 w-max transition-all duration-500 ${
           showCategoryPopup
             ? "visible opacity-1 scale-1"
             : "invisible opacity-0 scale-75"

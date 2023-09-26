@@ -2,8 +2,8 @@
 
 // SVG
 import WhitePlus from "@public/white-plus.svg"
-import InventoryButton from "../InventoryButton"
-import AddCategoryPopup from "./AddCategoryPopup"
+import InventoryButton from "../button/InventoryButton"
+import AddCategoryPopup from "./component/AddCategoryPopup"
 
 // React
 import { useState } from "react"

@@ -7,8 +7,8 @@ import Image, { StaticImageData } from "next/image"
 import { Dispatch, SetStateAction, useState, useEffect } from "react"
 
 // Components
-import Popup, { PopupButton } from "./popup/Popup"
-import PopupBlocker from "./popup/PopupBlocker"
+import Popup, { PopupButton } from "./components/Popup"
+import PopupBlocker from "./components/PopupBlocker"
 
 type Props = {
   src: StaticImageData
@@ -70,7 +70,7 @@ export default function InventoryButton({
         } select-none`}
       >
         <button
-          className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md hover:opacity-95`}
+          className={`bg-gradient-to-br ${gradientColors} rounded-full p-2 drop-shadow-md brightness-100 hover:brightness-95 transition-all duration-300`}
           onClick={() => {
             if (showActionsPopup) setOutsideIsClicked(true)
             setShowActionPopup(!showActionsPopup)

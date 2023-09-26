@@ -14,7 +14,7 @@ type Props = {
  */
 export default function Bar({ name }: Props) {
   return (
-    <button className="bg-white p-3 hover:bg-neutral-100 grow">
+    <button className="bg-white p-3 hover:bg-neutral-100 transition-colors duration-300 grow">
       <span className="inline-block min-w-[10rem]">{name}</span>
     </button>
   )

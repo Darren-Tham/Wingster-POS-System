@@ -3,8 +3,8 @@
 // React
 import { useContext } from "react"
 
-// Context
-import IconContext from "@/components/sidebar/IconContext"
+// Components
+import { IconContext } from "../Sidebar"
 
 /**
  * Lanuage Icon in `Sidebar`. Toggles

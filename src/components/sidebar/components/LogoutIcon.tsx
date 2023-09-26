@@ -2,7 +2,7 @@
 import LogoutSVG from "@public/logout-icon.svg"
 
 // Components
-import ButtonIcon from "../ButtonIcon"
+import ButtonIcon from "./components/button-icon/ButtonIcon"
 
 /**
  * Logout Icon in `Sidebar`. Logs out

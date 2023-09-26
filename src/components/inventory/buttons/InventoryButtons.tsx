@@ -1,8 +1,8 @@
 "use client"
 
 // Components
-import AddButton from "./add/AddButton"
-import DeleteButton from "./DeleteButton"
+import AddButton from "./components/add/AddButton"
+import DeleteButton from "./components/delete/DeleteButton"
 
 /**
  * Buttons that have different actions

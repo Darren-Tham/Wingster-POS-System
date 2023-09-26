@@ -2,7 +2,7 @@
 import CashRegisterSVG from "@public/cash-register-icon.svg"
 
 // Components
-import ButtonIcon from "../ButtonIcon"
+import ButtonIcon from "./components/button-icon/ButtonIcon"
 
 /**
  * Cash Register Icon in `Sidebar`. Opens

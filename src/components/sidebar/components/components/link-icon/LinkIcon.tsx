@@ -3,15 +3,13 @@
 // React
 import { useContext } from "react"
 
-// Context
-import IconContext from "@/components/sidebar/IconContext"
-
 // Next
 import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
 
 // Components
-import SelectionBar from "./SelectionBar"
+import SelectionBar from "./components/SelectionBar"
+import { IconContext } from "../../../Sidebar"
 
 /**
  * Props for the `LinkIcon` component.

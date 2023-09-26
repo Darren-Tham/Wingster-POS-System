@@ -6,7 +6,7 @@ import InventoryButtons from "@/components/inventory/buttons/InventoryButtons"
 
 // Constants
 import { MAIN_BACKGROUND_STYLES } from "@/lib/Constants"
-import AddCategoryPopup from "@/components/inventory/buttons/add/AddCategoryPopup"
+import AddCategoryPopup from "@/components/inventory/buttons/components/add/component/AddCategoryPopup"
 
 /**
  * Page that stores the products in

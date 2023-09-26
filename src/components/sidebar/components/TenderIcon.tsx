@@ -3,7 +3,7 @@ import TenderGraySVG from "@public/tender-gray-icon.svg"
 import TenderBlueSVG from "@public/tender-blue-icon.svg"
 
 // Components
-import LinkIcon from "../LinkIcon"
+import LinkIcon from "./components/link-icon/LinkIcon"
 
 /**
  * Props for `TenderIcon` component.

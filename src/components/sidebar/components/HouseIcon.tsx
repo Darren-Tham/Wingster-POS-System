@@ -1,5 +1,5 @@
 // Components
-import LinkIcon from "../LinkIcon"
+import LinkIcon from "./components/link-icon/LinkIcon"
 
 // SVG
 import HouseGraySVG from "@public/house-gray-icon.svg"

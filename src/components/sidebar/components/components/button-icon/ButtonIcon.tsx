@@ -3,11 +3,11 @@
 // React
 import { useContext } from "react"
 
-// Context
-import IconContext from "@/components/sidebar/IconContext"
-
 // Next
 import Image, { StaticImageData } from "next/image"
+
+// Components
+import { IconContext } from "../../../Sidebar"
 
 /**
  * Props for the `ButtonIcon` component.

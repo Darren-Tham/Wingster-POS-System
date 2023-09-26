@@ -1,16 +1,16 @@
 "use client"
 
-// Context
-import IconContext from "@/components/sidebar/IconContext"
+// React
+import { createContext } from "react"
 
 // Components
-import WingsterLogo from "./icons/WingsterLogo"
-import HouseIcon from "./icons/HouseIcon"
-import OrderIcon from "./icons/OrderIcon"
-import TenderIcon from "./icons/TenderIcon"
-import CashRegisterIcon from "./icons/CashRegisterIcon"
-import LanguageIcon from "./icons/LanguageIcon"
-import LogoutIcon from "./icons/LogoutIcon"
+import WingsterLogo from "./components/WingsterLogo"
+import HouseIcon from "./components/HouseIcon"
+import OrderIcon from "./components/OrderIcon"
+import TenderIcon from "./components/TenderIcon"
+import CashRegisterIcon from "./components/CashRegisterIcon"
+import LanguageIcon from "./components/LanguageIcon"
+import LogoutIcon from "./components/LogoutIcon"
 
 // Enums
 import { SelectedIcons } from "@/lib/Enums"
@@ -23,6 +23,12 @@ type Props = {
 }
 
 /**
+ * Context that contains the styles for
+ * the icon in `Sidebar`.
+ */
+export const IconContext = createContext("")
+
+/**
  * Sidebar that links to different pages
  * and events of the application.
  *
@@ -31,7 +37,7 @@ type Props = {
  */
 export default function Sidebar({ currentIcon }: Props) {
   const iconStyles =
-    "w-full aspect-square flex justify-center items-center mx-8 hover:bg-neutral-100 relative"
+    "w-full aspect-square flex justify-center items-center mx-8 hover:bg-neutral-100 relative transition-colors duration-300"
   return (
     <aside className="flex flex-col justify-between items-center w-max h-screen">
       <IconContext.Provider value={iconStyles}>

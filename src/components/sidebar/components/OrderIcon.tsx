@@ -3,7 +3,7 @@ import OrderGraySVG from "@public/order-gray-icon.svg"
 import OrderBlueSVG from "@public/order-blue-icon.svg"
 
 // Components
-import LinkIcon from "../LinkIcon"
+import LinkIcon from "./components/link-icon/LinkIcon"
 
 /**
  * Props for `OrderIcon` component.
