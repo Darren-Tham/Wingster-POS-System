@@ -5,7 +5,7 @@ import { useRef, type MutableRefObject } from "react"
 import { useDraggable } from "react-use-draggable-scroll"
 
 // Components
-import Bar from "./Bar"
+import Bar from "./components/Bar"
 
 /**
  * Bars that displays all the
