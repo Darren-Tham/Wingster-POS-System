@@ -29,7 +29,7 @@ export default function AddCategoryPopup({
   setShowCategoryPopup
 }: Props) {
   const buttonStyles =
-    "bg-gradient-to-br text-white text-2xl hover:opacity-95 drop-shadow-md rounded-lg p-3"
+    "bg-gradient-to-br text-white text-2xl brightness-100 hover:brightness-95 drop-shadow-md rounded-lg p-3 transition-all duration-300"
   return (
     <>
       <BackgroundBlur showCategoryPopup={showCategoryPopup} />
