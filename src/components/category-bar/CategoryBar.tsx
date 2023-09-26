@@ -1,12 +1,18 @@
 "use client"
 
+// React
+import { createContext } from "react"
+
 // Components
 import LeftArrow from "./arrows/LeftArrow"
 import RightArrow from "./arrows/RightArrow"
 import Bars from "./bars/Bars"
 
-// Context
-import ArrowContext from "./arrows/ArrowContext"
+/**
+ * Context that contains the styles for the
+ * arrows in `CategoryBar`.
+ */
+export const ArrowContext = createContext("")
 
 /**
  * Bar that displays the different

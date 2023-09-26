@@ -3,14 +3,14 @@
 // React
 import { useContext } from "react"
 
-// Context
-import ArrowContext from "./ArrowContext"
-
 // SVG
 import RightArrowSVG from "@public/arrow-right.svg"
 
 // Next
 import Image from "next/image"
+
+// Components
+import { ArrowContext } from "../CategoryBar"
 
 /**
  * Button that scrolls the `CategoryBar`
