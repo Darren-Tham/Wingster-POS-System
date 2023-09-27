@@ -21,7 +21,7 @@ type Props = {
  */
 export default function ButtonCell({ name, href, cellStyles }: Props) {
   return (
-    <Link className={`${cellStyles} bg-white hover:bg-neutral-50`} href={href}>
+    <Link className={`${cellStyles} bg-white hover:bg-neutral-50 transition-colors duration-300`} href={href}>
       {name}
     </Link>
   )
