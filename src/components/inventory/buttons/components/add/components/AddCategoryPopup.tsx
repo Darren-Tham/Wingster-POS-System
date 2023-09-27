@@ -1,5 +1,5 @@
 // React
-import { Dispatch, SetStateAction } from "react"
+import { type Dispatch, type SetStateAction, useRef } from "react"
 
 // Components
 import BackgroundBlur from "./components/background-blur/BackgroundBlur"
@@ -28,6 +28,7 @@ export default function AddCategoryPopup({
   showCategoryPopup,
   setShowCategoryPopup
 }: Props) {
+  const inputRef = useRef<HTMLInputElement | null>(null)
   const buttonStyles =
     "bg-gradient-to-br text-white text-2xl brightness-100 hover:brightness-95 drop-shadow-md rounded-lg p-3 transition-all duration-300"
   return (
@@ -41,11 +42,12 @@ export default function AddCategoryPopup({
         }`}
       >
         <span className="text-5xl">New Category</span>
-        <AddCategoryInput />
+        <AddCategoryInput inputRef={inputRef} />
         <div className="grid grid-cols-2 gap-7">
           <AddCategoryCancelButton
             buttonStyles={buttonStyles}
             setShowCategoryPopup={setShowCategoryPopup}
+            inputRef={inputRef}
           />
           <AddCategorySaveButton buttonStyles={buttonStyles} />
         </div>
