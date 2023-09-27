@@ -21,7 +21,7 @@ export const ArrowContext = createContext("")
  * @returns `CategoryBar` component
  */
 export default function CategoryBar() {
-  const arrowStyles = "flex justify-center items-center hover:bg-neutral-100"
+  const arrowStyles = "flex justify-center items-center hover:bg-neutral-100 transitions-colors duration-300"
   return (
     <section
       className="grid bg-white rounded-xl drop-shadow-md"

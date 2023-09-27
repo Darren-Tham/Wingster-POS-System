@@ -1,5 +1,5 @@
 // Components
-import Header from "@/components/inventory/Header"
+import Header from "@/components/inventory/header/Header"
 import Sidebar from "@/components/sidebar/Sidebar"
 import CategoryBar from "@/components/category-bar/CategoryBar"
 import InventoryButtons from "@/components/inventory/buttons/InventoryButtons"

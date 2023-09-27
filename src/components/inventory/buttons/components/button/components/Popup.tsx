@@ -67,7 +67,8 @@ export default function Popup({
  */
 function getPopupButtonElements(popupButtons: PopupButton[]) {
   return popupButtons.map(({ name, onClick }, i) => {
-    let className = "w-64 p-3 hover:bg-neutral-100 transition-colors duration-300"
+    let className =
+      "w-64 p-3 hover:bg-neutral-100 transition-colors duration-300"
     if (i === 0) className += " rounded-t-lg"
     if (i === popupButtons.length - 1) className += " rounded-b-lg"
     return (

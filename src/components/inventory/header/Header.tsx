@@ -1,5 +1,5 @@
 // Components
-import SearchBar from "../header/SearchBar"
+import SearchBar from "../../header/SearchBar"
 
 /**
  * Header for the `Inventory` page.
