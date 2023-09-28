@@ -3,10 +3,11 @@
 // SVG
 import WhitePlus from "@public/white-plus.svg"
 import InventoryButton from "../button/InventoryButton"
-import AddCategoryPopup from "./components/AddCategoryPopup"
+import AddCategoryPopup from "./components/category-popup/AddCategoryPopup"
 
 // React
 import { useState } from "react"
+import AddProductPopup from "./components/product-popup/AddProductPopup"
 
 /**
  * Button that allows the user to add
@@ -18,11 +19,16 @@ import { useState } from "react"
 export default function AddButton() {
   const [showCategoryPopup, setShowCategoryPopup] = useState(false)
   const [showAddActionsPopup, setShowAddActionsPopup] = useState(false)
+  const [showProductPopup, setShowProductPopup] = useState(false)
+
 
   const popupButtons = [
     {
       name: "Add Product",
-      onClick: () => {}
+      onClick: () => {
+        setShowProductPopup(true)
+        setShowAddActionsPopup(false)
+      }
     },
     {
       name: "Add Category",
@@ -48,6 +54,10 @@ export default function AddButton() {
       <AddCategoryPopup
         showCategoryPopup={showCategoryPopup}
         setShowCategoryPopup={setShowCategoryPopup}
+      />
+      <AddProductPopup
+        showProductPopup={showProductPopup}
+        setShowProductPopup={setShowProductPopup}
       />
     </>
   )
