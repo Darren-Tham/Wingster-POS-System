@@ -17,7 +17,7 @@ export default function PriceInput({ inputRef }: Props) {
   return (
     <input
       className="border-solid border-[3px] border-neutral-300 placeholder:text-neutral-300 text xl outline-none bg-white rounded-xl p-3 w-full"
-      placeholder="New Product Category..."
+      placeholder="New Product Price..."
       ref={inputRef}
     />
   )
