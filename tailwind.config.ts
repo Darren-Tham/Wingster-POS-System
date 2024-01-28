@@ -13,6 +13,21 @@ const config: Config = {
         "main-blue": "#2261FF",
         "main-light-blue": "#638DFF",
         "icon-color": "#B3B3B3"
+      },
+      animation: {
+        popup: "popup 300ms ease forwards"
+      },
+      keyframes: {
+        popup: {
+          from: {
+            opacity: "0",
+            transform: "scale(0.75)"
+          },
+          to: {
+            opacity: "1",
+            transform: "scale(1)"
+          }
+        }
       }
     }
   },

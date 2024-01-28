@@ -1,4 +1,0 @@
-/**
- * Styles for the main background.
- */
-export const MAIN_BACKGROUND_STYLES = "flex flex-col grow bg-neutral-100 p-10"

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .main {
+        @apply flex flex-col grow bg-neutral-100 p-10
+    }
+}
